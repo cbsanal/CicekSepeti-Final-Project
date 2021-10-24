@@ -12,9 +12,12 @@ const BuyModal = ({ setShowBuyModal, id, token }) => {
       toast.success("Satın alındı.");
       setShowBuyModal(false);
       //In some items when you bought them, their isSold property does not change
-      //but isSold properties in offers become "sold" and this causes a problem sometimes
-      dispatch(itemDetailsAct(id, "clear"));
-      dispatch(itemDetailsAct(id));
+      //but isSold properties in offers become "sold" and this causes a problem
+      //also sometimes isSold property updates late, this is why I set timeout to make request
+      setTimeout(() => {
+        dispatch(itemDetailsAct(id, "clear"));
+        dispatch(itemDetailsAct(id));
+      }, 750);
     }
   }, [buyItem.status]);
 
