@@ -1,0 +1,9 @@
+@mixin flex($direction: row, $justify: space-between, $align: center) {
+  display: flex;
+  align-items: $align;
+  justify-content: $justify;
+  flex-direction: $direction;
+}
+.br8 {
+  border-radius: 8px;
+}

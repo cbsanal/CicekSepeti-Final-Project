@@ -1,0 +1,108 @@
+@use "../_mixins.scss" as m;
+
+.offered-item-container {
+  border: #f2f2f2 1px solid;
+  margin-top: 2rem;
+  padding: 1rem;
+  padding-right: 3rem;
+  border-radius: 8px;
+  display: flex;
+  .img-wrapper {
+    min-width: 7.8rem;
+    height: 8.4rem;
+    border-radius: 8px;
+    img {
+      border-radius: 8px;
+    }
+  }
+}
+
+.item-info {
+  width: 100%;
+  @include m.flex($align: normal);
+  div:last-child {
+    display: flex;
+    align-items: center;
+  }
+}
+
+.offered-item {
+  padding-top: 0.4rem;
+  & > span {
+    margin-left: 1rem;
+    display: block;
+    color: #555555;
+    font-size: 1.8rem;
+    //bottom code, incase name of the item is too long
+    width: 22.7rem;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  .price {
+    margin-top: 0.7rem;
+    width: 22.7rem;
+    height: 3.6rem;
+    background-color: #f2f2f2;
+    margin-left: 1rem;
+    border-radius: 8px;
+    color: #b1b1b1;
+    font-size: 1.5rem;
+    padding: 0 1rem;
+    @include m.flex($justify: normal);
+    b {
+      margin-left: 0.7rem;
+      color: #525252;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+  }
+}
+
+.offered-item-buy-btn {
+  font-size: 1.5rem;
+  background-color: #4b9ce2;
+  width: 8.6rem;
+  height: 3rem;
+  color: #fff;
+  border-radius: 8px;
+}
+
+.confirm,
+.answer-waiting,
+.item-sold,
+.rejected {
+  color: #4b9ce2;
+  margin-left: 2rem;
+  font-size: 1.5rem;
+}
+.answer-waiting {
+  color: #965b05;
+}
+.item-sold {
+  color: #58bb44;
+}
+.rejected {
+  color: red;
+}
+
+@media (max-width: 860px) {
+  .offered-item-container {
+    padding: 1rem;
+  }
+  .item-info {
+    flex-direction: column;
+    max-width: max-content;
+    div:last-child {
+      justify-content: flex-end;
+      margin-top: 1rem;
+    }
+  }
+  .confirm-btn,
+  .reject-btn {
+    width: 10.8rem;
+  }
+  .reject-btn {
+    margin-left: 1.1rem;
+  }
+}

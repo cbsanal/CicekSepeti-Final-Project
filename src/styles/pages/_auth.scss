@@ -1,0 +1,178 @@
+@use "../mixins" as m;
+
+.auth-container {
+  @include m.flex();
+  background-color: #fbfbfb;
+  height: 100vh;
+  .img-container {
+    height: 100%;
+    flex: 4.348;
+  }
+}
+
+.logo-form-container {
+  flex: 5.652;
+  @include m.flex($direction: column);
+  .logo-container {
+    position: relative;
+    width: 12vw;
+    min-width: 14.8rem;
+    max-width: 24.5rem;
+    bottom: 5.5rem;
+  }
+}
+
+.auth-form-container {
+  @include m.flex($direction: column, $justify: normal);
+  position: relative;
+  bottom: 2.5rem;
+  background-color: #fff;
+  box-shadow: 0px 3px 12px #1e36480a;
+  padding: 7rem 9rem;
+  span {
+    color: #525252;
+    &:nth-child(1) {
+      font-weight: 700;
+      font-size: 3.2rem;
+    }
+    &:nth-child(2) {
+      margin-top: 1rem;
+      font-size: 1.5rem;
+    }
+    &.direct-to-register,
+    &.direct-to-login {
+      margin-top: 4.1rem;
+      font-size: 1.5rem;
+      a {
+        color: #4b9ce2;
+        font-weight: 700;
+      }
+    }
+    &.direct-to-login {
+      margin-top: 2rem;
+    }
+  }
+}
+
+.auth-form {
+  margin-top: 5rem;
+  width: 20vw;
+  max-width: 40rem;
+  min-width: 35.5rem;
+  label {
+    font-size: 1.5rem;
+    display: block;
+    text-align: left;
+    margin-bottom: 0.5rem;
+    &:last-of-type {
+      margin-top: 1.5rem;
+    }
+  }
+  input {
+    background-color: #f4f4f4;
+    border-radius: 8px;
+    height: 4.5rem;
+    padding-left: 1.5rem;
+    width: 100%;
+    font-size: 1.6rem;
+    &::placeholder {
+      font-size: 1.6rem;
+    }
+    &:focus {
+      outline: none;
+      border: 1px solid #4b9ce2;
+      background-color: #f0f8ff !important;
+    }
+  }
+  button {
+    background-color: #4b9ce2;
+    width: 100%;
+    height: 4.5rem;
+    font-size: 1.8rem;
+    font-weight: 700;
+    border-radius: 8px;
+    color: white;
+    margin-top: 3rem;
+    position: relative;
+  }
+}
+
+.forget-password {
+  text-align: right;
+  font-size: 1.2rem;
+  margin-top: 0.5rem;
+  a {
+    color: #b1b1b1;
+  }
+}
+
+.auth-loading-gif {
+  width: 2.5rem;
+  height: 2.5rem;
+  position: absolute;
+  left: 1rem;
+}
+
+// If user select autocomplete in email input
+// Chrome using its own style in that input (lightblue color)
+// To prevent this I added this webkit parts
+
+.auth-form {
+  .not-valid {
+    background-color: #fff2f2 !important;
+    border: 1px solid #f77474 !important;
+    color: #f77474 !important;
+    &:focus {
+      border: 1px solid #f77474 !important;
+      background-color: #fff2f2 !important;
+    }
+    &:-webkit-autofill {
+      -webkit-box-shadow: 0 0 0 50px #fff2f2 inset;
+      box-shadow: 0 0 0 50px #fff2f2 inset;
+      -webkit-text-fill-color: red;
+    }
+  }
+}
+
+input:-webkit-autofill {
+  -webkit-box-shadow: 0 0 0 50px #f4f4f4 inset;
+  box-shadow: 0 0 0 50px #f4f4f4 inset;
+  -webkit-text-fill-color: #333;
+}
+
+input:-webkit-autofill:focus {
+  -webkit-box-shadow: 0 0 0 50px #f0f8ff inset;
+  box-shadow: 0 0 0 50px #f0f8ff inset;
+  -webkit-text-fill-color: #333;
+}
+
+@media (max-width: 1024px) {
+  .auth-container {
+    background-color: #f2f2f2;
+    .img-container {
+      display: none;
+    }
+    .auth-form-container {
+      padding: 2.2rem 2rem;
+    }
+  }
+}
+
+@media (max-width: 480px) {
+  .auth-form {
+    min-width: 31.5rem;
+  }
+  .Toastify__toast-container {
+    width: 35rem !important;
+    margin: 1rem !important;
+  }
+  .Toastify__close-button {
+    display: none;
+  }
+}
+
+@media (max-width: 320px) {
+  .logo-container {
+    display: none !important;
+  }
+}

@@ -1,0 +1,89 @@
+@use "../_mixins.scss" as m;
+
+.img-upload-container {
+  border: dashed black;
+  border: #b1b1b1 dashed 2px;
+  border-radius: 10px;
+  height: 16.4rem;
+  margin-top: 2.5rem;
+  @include m.flex($justify: normal, $align: normal, $direction: column);
+}
+
+.img-upload-container {
+  cursor: pointer;
+}
+
+.file-input-container {
+  height: 100%;
+  @include m.flex($direction: column, $justify: center);
+  span {
+    color: #525252;
+    font-size: 1.4rem;
+    &:first-of-type {
+      font-weight: 600;
+    }
+    &:last-child {
+      color: #b1b1b1;
+      font-size: 1.2rem;
+      margin-top: 1rem;
+    }
+  }
+  .select-img {
+    width: 12.2rem;
+    height: 3rem;
+    background-color: #f4f4f4;
+    border-radius: 15px;
+    @include m.flex($justify: center);
+    font-size: 1.5rem;
+    color: #b1b1b1;
+    margin-top: 0.5rem;
+  }
+}
+.item-img-preview {
+  width: 11.3rem;
+  height: 11.3rem;
+  border-radius: 10px;
+  margin-top: 2.5rem;
+  position: relative;
+  img {
+    border-radius: 10px;
+  }
+}
+.img-delete {
+  position: absolute;
+  top: -5px;
+  right: -1px;
+  z-index: 1;
+  width: 1.75rem;
+  height: 1.75rem;
+  cursor: pointer;
+}
+.progress-bar {
+  width: 29.5rem;
+  background-color: #eaeaea;
+  border-radius: 2px;
+  height: 4px;
+  position: relative;
+  .progress {
+    background-color: #4b9ce2;
+    position: absolute;
+    left: 0;
+    width: 0%;
+    height: 4px;
+    transition: width 0.2s ease-in-out;
+  }
+}
+
+.progress-bar-container {
+  margin: auto;
+  text-align: center;
+  color: #525252;
+  font-size: 1.2rem;
+  span {
+    margin-bottom: 0.5rem;
+    display: block;
+    &:last-child {
+      margin-top: 0.5rem;
+    }
+  }
+}

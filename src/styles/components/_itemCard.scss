@@ -1,0 +1,70 @@
+@use "../mixins" as m;
+
+.item {
+  padding: 1rem;
+  background: #fff;
+  border-radius: 8px;
+  max-height: 39.2rem;
+  .price {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: #3e3e3e;
+    margin-top: 2.6rem;
+    display: inline-block;
+    //bottom code, incase price is too high
+    max-width: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+}
+
+.item-img-wrapper {
+  height: 29.7rem;
+  border-radius: 8px;
+  overflow: hidden;
+  img {
+    transition: transform 0.5s ease-in-out;
+    border-radius: 8px;
+  }
+}
+
+.brand-color-wrapper {
+  margin-top: 0.5rem;
+  @include m.flex();
+  span {
+    text-transform: capitalize;
+    color: #3e3e3e;
+    &:first-child {
+      color: #4b9ce2;
+      font-weight: 700;
+      font-size: 1.5rem;
+    }
+    &:last-child {
+      font-size: 1.3rem;
+    }
+  }
+}
+
+@media (max-width: 480px) {
+  .item {
+    padding: 0.6rem;
+    .price {
+      margin-top: 1.2rem;
+      font-size: 1.5rem;
+    }
+  }
+  .item-img-wrapper {
+    height: 18.4rem;
+  }
+  .brand-color-wrapper {
+    margin-top: 0.5rem;
+    flex-direction: column;
+    align-items: flex-start;
+    span {
+      &:last-child {
+        font-size: 1rem;
+      }
+    }
+  }
+}

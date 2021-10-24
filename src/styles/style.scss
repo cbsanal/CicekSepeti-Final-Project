@@ -1,0 +1,19 @@
+@use "global";
+@use "mixins";
+@use "pages";
+@use "components";
+
+.Toastify__toast--error {
+  background-color: #ffe5e5 !important;
+  color: #f77474 !important;
+  font-size: 1.6rem;
+}
+:root {
+  --toastify-icon-color-error: #f77474 !important;
+  --toastify-icon-color-success: #46af32 !important;
+}
+.Toastify__toast--success {
+  font-size: 1.6rem !important;
+  background-color: #f1fff0 !important;
+  color: #46af32 !important;
+}

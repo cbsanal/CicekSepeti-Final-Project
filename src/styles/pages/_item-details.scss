@@ -1,0 +1,241 @@
+@use "../mixins" as m;
+
+.details {
+  background-color: #fff;
+  @include m.flex($align: flex-start, $justify: normal);
+  border-radius: 8px;
+  padding: 1.6rem;
+  margin: 0 22rem;
+  margin-top: 2rem;
+  height: 77rem;
+  .img-wrapper {
+    border-radius: 8px;
+    height: 100%;
+    width: 48%;
+    // min-width: 40rem;
+    img {
+      border-radius: 8px;
+    }
+  }
+  span {
+    text-transform: capitalize;
+  }
+}
+
+.details-info {
+  margin-top: 1.4rem;
+  margin-left: 6rem;
+  @include m.flex($direction: column, $align: normal, $justify: normal);
+  .title {
+    font-size: 3.4rem;
+    color: #555555;
+  }
+}
+
+.details-options {
+  display: flex;
+  margin-top: 2.5rem;
+  color: #525252;
+  font-size: 1.5rem;
+  div {
+    &:not(:last-child) {
+      margin-right: 2rem;
+    }
+    * {
+      display: block;
+      &:not(:last-child) {
+        margin-bottom: 2rem;
+      }
+    }
+  }
+}
+
+.prices-container {
+  margin-top: 3rem;
+  .price {
+    color: #525252;
+    font-size: 2.5rem;
+    font-weight: 700;
+  }
+  .offered-price {
+    width: 23rem;
+    background-color: #f2f2f2;
+    border-radius: 8px;
+    height: 3.6rem;
+    font-size: 1.5rem;
+    padding-left: 1rem;
+    margin-top: 0.2rem;
+    display: flex;
+    align-items: center;
+    color: #b1b1b1;
+    b {
+      margin-left: 0.4rem;
+      color: #525252;
+    }
+  }
+}
+
+.details-btn-wrapper {
+  margin-top: 3rem;
+  button {
+    height: 4.5rem;
+    width: 23.5rem;
+    border-radius: 8px;
+  }
+  .buy-item {
+    color: #fff;
+    background-color: #4b9ce2;
+    font-weight: 700;
+    font-size: 1.8rem;
+  }
+  .make-offer {
+    background-color: #f0f8ff;
+    color: #4b9ce2;
+    margin-left: 1rem;
+    font-weight: 700;
+    font-size: 1.8rem;
+  }
+  .cancel-offer {
+    font-weight: 700;
+    font-size: 1.8rem;
+    margin-left: 1rem;
+    background-color: #f0f8ff;
+    color: #4b9ce2;
+  }
+}
+
+.desc-title {
+  font-weight: 700;
+  color: #525252;
+  font-size: 1.8rem;
+  margin-top: 3rem;
+}
+.description {
+  margin-top: 1rem;
+  color: #555555;
+  font-size: 1.5rem;
+  max-width: 48rem;
+  max-height: 10rem;
+  overflow-y: auto;
+}
+
+.already-sold {
+  color: #faad60;
+  background-color: #fff0e2;
+  width: 23.5rem;
+  height: 4.5rem;
+  font-size: 1.8rem;
+  border-radius: 8px;
+  @include m.flex($justify: center);
+}
+
+.item-loading {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 10rem;
+  height: auto;
+}
+
+@media (max-width: 1510px) {
+  .details-btn-wrapper {
+    button {
+      display: block;
+      &:last-child {
+        margin: 0;
+        margin-top: 2rem;
+      }
+    }
+  }
+  .offered-price {
+    width: 20rem;
+  }
+}
+
+@media (max-width: 1366px) {
+  .details {
+    margin: 0 11rem;
+    margin-top: 2rem;
+  }
+  .details-info {
+    margin-left: 2rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .details {
+    margin: 1rem;
+    padding: 0.6rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .details {
+    flex-direction: column;
+    .img-wrapper {
+      max-width: none;
+      width: 100%;
+      max-height: 36.2rem;
+    }
+  }
+  .details-info {
+    margin: 0;
+    margin-top: 1rem;
+    width: 100%;
+    .title {
+      font-size: 1.8rem;
+    }
+  }
+  .prices-container {
+    @include m.flex();
+    width: 100%;
+    margin-top: 0.8rem;
+    .price {
+      font-size: 2rem;
+    }
+    .offered-price {
+      width: 17rem;
+      justify-content: center;
+      padding: 0;
+      font-size: 1.2rem;
+      b {
+        font-size: 1.5rem;
+      }
+    }
+  }
+  .details-container {
+    @include m.flex($direction: column-reverse, $align: flex-start);
+    .details-options {
+      margin-top: 0.9rem;
+      span,
+      b {
+        margin-bottom: 1rem;
+      }
+    }
+  }
+  .details-btn-wrapper {
+    position: fixed;
+    margin: 0;
+    background-color: #fff;
+    width: 100vw;
+    left: 0;
+    @include m.flex($justify: center);
+    bottom: 0;
+    padding: 1rem;
+    button {
+      width: 17.2rem;
+      &:last-child {
+        margin: 0;
+        margin-left: 1rem;
+      }
+    }
+  }
+  .desc-title {
+    margin-top: 0;
+    font-size: 1.5rem;
+  }
+  .already-sold {
+    width: 100%;
+  }
+}

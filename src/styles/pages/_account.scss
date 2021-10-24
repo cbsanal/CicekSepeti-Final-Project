@@ -1,0 +1,107 @@
+@use "../_mixins.scss" as m;
+
+.account {
+  padding: 2rem 22rem;
+}
+
+.account-email {
+  background-color: #fff;
+  padding: 1.6rem 2.6rem;
+  @include m.flex($justify: normal);
+  border-radius: 8px;
+  .user-icon-wrapper {
+    width: 3.8rem;
+  }
+  span {
+    color: #525252;
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-left: 1rem;
+  }
+}
+
+.offers-btn-wrapper {
+  padding-top: 2rem;
+  padding-left: 3rem;
+  background-color: #fff;
+  margin-top: 2rem;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+  button {
+    color: #b1b1b1;
+    font-size: 1.5rem;
+    &.active {
+      color: #4b9ce2;
+      font-weight: 700;
+      padding-bottom: 0.5rem;
+      border-bottom: 1.5px solid#4b9ce2;
+      z-index: 2;
+      position: relative;
+    }
+    &:last-child {
+      margin-left: 3.4rem;
+    }
+  }
+}
+
+.straight-line {
+  height: 1.7px;
+  background-color: #f2f2f2;
+}
+
+.offers {
+  padding-left: 3rem;
+  padding-right: 3.7rem;
+  padding-bottom: 2rem;
+  position: relative;
+  background-color: #fff;
+  height: 65rem;
+  overflow: auto;
+  border-bottom-left-radius: 8px;
+  border-bottom-right-radius: 8px;
+}
+
+.offers-loading {
+  width: 7rem;
+  height: 7rem;
+  position: absolute;
+  top: 3rem;
+  left: 3rem;
+}
+
+.confirm-btn,
+.reject-btn {
+  width: 8.6rem;
+  height: 3rem;
+  border-radius: 8px;
+  color: #ffffff;
+  font-size: 1.5rem;
+}
+.reject-btn {
+  background-color: #f77474;
+  margin-left: 1rem;
+}
+.confirm-btn {
+  background-color: #4b9ce2;
+}
+
+@media (max-width: 1366px) {
+  .account {
+    padding: 2rem 11rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .account {
+    padding: 2rem 2.5rem;
+  }
+  .offers {
+    padding: 1rem;
+    padding-top: 0;
+  }
+}
+@media (max-width: 480px) {
+  .account {
+    padding: 2rem 1rem;
+  }
+}
