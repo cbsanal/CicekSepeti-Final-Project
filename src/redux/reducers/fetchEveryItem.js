@@ -11,7 +11,7 @@ const fetchAllItemsReducer = (state = initialState, action) => {
     case ALL_PRODUCTS.ALL_PRODUCTS_LOADED:
       return { ...state, data: action.payload, isFetching: false };
     case ALL_PRODUCTS.ALL_PRODUCTS_ERROR:
-      return { ...state, isError: true, isFetching: false };
+      return { ...state, isError: action.payload, isFetching: false };
     case ALL_PRODUCTS.ALL_PRODUCTS_CLEAR:
       return initialState;
     default:

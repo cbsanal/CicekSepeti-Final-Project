@@ -6,6 +6,7 @@ import { banner1x, banner2x, loading } from "../assets";
 import { categories } from "../helpers/categoryOptions";
 import { useParams } from "react-router";
 import { Link } from "react-router-dom";
+import { toast } from "react-toastify";
 
 const EveryItems = () => {
   const dispatch = useDispatch();
@@ -18,6 +19,10 @@ const EveryItems = () => {
     dispatch(fetchEveryItemAct());
     return () => dispatch(fetchEveryItemAct("clear"));
   }, []);
+
+  useEffect(() => {
+    if (products.isError) toast.error(products.isError);
+  }, [products.isError]);
 
   useEffect(() => {
     setDatas(products.data);

@@ -22,10 +22,12 @@ const fetchAllItems = (type) => async (dispatch) => {
   return fetch("https://bootcampapi.techcs.io/api/fe/v1/product/all")
     .then((response) => {
       if (response.status === 200) return response.json();
+      else if (response.status === 429)
+        throw new Error("İstek aşımı, lütfen sonra tekrar deneyin");
       else throw new Error("Bilinmeyen bir sorun oluştu");
     })
     .then((data) => dispatch(dataLoaded(data)))
-    .catch((error) => dispatch(dataLoadingError(error)));
+    .catch((error) => dispatch(dataLoadingError(`${error}`)));
 };
 
 export default fetchAllItems;
