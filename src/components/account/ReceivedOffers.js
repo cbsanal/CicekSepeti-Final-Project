@@ -26,7 +26,7 @@ const ReceivedOffers = ({ token }) => {
   return (
     <>
       {receivedOffers.isLoading && (
-        <img className="offers-loading" src={loading} alt="loading-img" />
+        <img className="offers-loading" src={loading} alt="yükleniyor" />
       )}
       {receivedOffers.data.map((offer) => (
         <Offer

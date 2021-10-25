@@ -112,7 +112,8 @@
   align-items: center;
 }
 
-// On-off btn
+// Switch button start
+
 .toggle-switch {
   display: inline-block;
   text-align: left;
@@ -168,7 +169,8 @@
 .checkbox:checked + .label .switch {
   right: 3px;
 }
-// On-off btn
+// Switch button finish
+
 .submit-item-btn {
   width: 31.5rem;
   background-color: #4b9ce2;
@@ -252,7 +254,7 @@
   }
   .item-options {
     flex-direction: column;
-    div {
+    & > div {
       margin: 0 !important;
     }
   }

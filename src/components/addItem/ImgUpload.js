@@ -73,10 +73,10 @@ const ImgUpload = ({ imgUrl, setImgUrl }) => {
     <>
       {imgUrl && (
         <div className="item-img-preview">
-          <img src={files[0].preview} alt="ürün resmi" />
+          <img src={files[0].preview} alt="ürün-resmi" />
           <img
             src={imgDelete}
-            alt="resmi sil"
+            alt="resmi-sil"
             onClick={() => {
               setImgUrl(false);
               setFiles([]);
@@ -92,7 +92,11 @@ const ImgUpload = ({ imgUrl, setImgUrl }) => {
             <div className="file-input-container" {...getRootProps()}>
               <input {...getInputProps()} />
               <div className="img-wrapper">
-                <img srcSet={`${upload1x}, ${upload2x} 2x`} alt="resim-yükle" />
+                <img
+                  srcSet={`${upload1x}, ${upload2x} 2x`}
+                  src={upload1x}
+                  alt="resim-yükle"
+                />
               </div>
               <span>Sürükleyip bırakarak yükle</span>
               <span>veya</span>

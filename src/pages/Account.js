@@ -27,7 +27,7 @@ const Account = () => {
       <section className="account">
         <div className="account-email">
           <div className="user-icon-wrapper">
-            <img src={accountUser} alt="user-icon" />
+            <img src={accountUser} alt="kullanıcı-ikonu" />
           </div>
           <span>{Cookies.get("email")}</span>
         </div>

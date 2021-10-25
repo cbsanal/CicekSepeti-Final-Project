@@ -54,7 +54,7 @@ const EveryItems = () => {
           <img
             srcSet={`${banner1x}, ${banner2x} 2x`}
             src={banner1x}
-            alt="banner-img"
+            alt="ürünleri-keşfet"
           />
         </div>
         <div className="categories">
@@ -80,14 +80,14 @@ const EveryItems = () => {
         )}
         <div className="products-container">
           {products.isFetching && (
-            <img className="loadingGif" src={loading} alt="loading-gif" />
+            <img className="loadingGif" src={loading} alt="yükleniyor" />
           )}
           {datas.map((item) => {
             const { brand, color, id, imageUrl, price } = item;
             const brandName = brand.title,
               colorName = color.title;
-            const itemProperties = { brandName, colorName, imageUrl, price };
-            return <ItemCard key={id} {...itemProperties} id={id} />;
+            const properties = { brandName, colorName, imageUrl, price, id };
+            return <ItemCard key={id} {...properties} />;
           })}
         </div>
       </section>

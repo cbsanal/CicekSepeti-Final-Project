@@ -94,38 +94,34 @@ const AddItem = () => {
             />
             <div className="item-options">
               <FormOptions
-                type="Kategori"
+                type={{ name: "Kategori", title: category.title }}
                 options={itemOptions.categoryOptions}
                 setOptionValue={setCategory}
                 setShowOptions={setShowCategoryOptions}
                 showOptions={showCategoryOptions}
-                value={{ ...category }}
               />
               <FormOptions
-                type="Marka"
+                type={{ name: "Marka", title: brand.title }}
                 options={itemOptions.brandOptions}
                 setOptionValue={setBrand}
                 setShowOptions={setShowBrandOptions}
                 showOptions={showBrandOptions}
-                value={{ ...brand }}
               />
             </div>
             <div className="item-options">
               <FormOptions
-                type="Renk"
+                type={{ name: "Renk", title: color.title }}
                 options={itemOptions.colorOptions}
                 setOptionValue={setColor}
                 setShowOptions={setShowColorOptions}
                 showOptions={showColorOptions}
-                value={{ ...color }}
               />
               <FormOptions
-                type="Kullanım Durumu"
+                type={{ name: "Kullanım Durumu", title: status.title }}
                 options={itemOptions.statusOptions}
                 setOptionValue={setStatus}
                 setShowOptions={setShowStatusOptions}
                 showOptions={showStatusOptions}
-                value={{ ...status }}
               />
             </div>
             <div className="price-container">
@@ -168,9 +164,7 @@ const AddItem = () => {
               </div>
             </div>
             <button className="submit-item-btn">
-              {newItem.isLoading && (
-                <img src={loadingWhite} alt="loading-gif" />
-              )}
+              {newItem.isLoading && <img src={loadingWhite} alt="yükleniyor" />}
               Kaydet
             </button>
           </form>

@@ -113,7 +113,7 @@ const Auth = ({ formType }) => {
                 <img
                   className="auth-loading-gif"
                   src={loadingWhite}
-                  alt="yükleniyor-gif"
+                  alt="yükleniyor"
                 />
               )}
             </button>

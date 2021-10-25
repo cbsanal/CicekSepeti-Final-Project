@@ -14,7 +14,7 @@ const Header = () => {
         {
           <Link to={token ? "/newItem" : "/login"}>
             <div>
-              <img src={plus} alt="plus-icon" />
+              <img src={plus} alt="artı-ikonu" />
               <span>Ürün Ekle</span>
             </div>
           </Link>
@@ -22,14 +22,14 @@ const Header = () => {
         {token ? (
           <Link to="/account">
             <div>
-              <img src={user} alt="user-icon" />
+              <img src={user} alt="kullanıcı-ikonu" />
               <span>Hesabım</span>
             </div>
           </Link>
         ) : (
           <Link to="/login">
             <div>
-              <img src={user} alt="user-icon" />
+              <img src={user} alt="kullanıcı-ikonu" />
               <span>Giriş Yap</span>
             </div>
           </Link>

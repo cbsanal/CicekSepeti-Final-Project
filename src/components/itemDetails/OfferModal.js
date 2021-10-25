@@ -67,7 +67,7 @@ const OfferModal = ({ img, title, price, setShowOfferModal, id, token }) => {
             <img
               className={options.o1 ? "show" : "hide"}
               src={tick}
-              alt="tick-img"
+              alt="tik-işareti"
             />
           </div>
           <span>%20'si Kadar Teklif Ver</span>
@@ -80,7 +80,7 @@ const OfferModal = ({ img, title, price, setShowOfferModal, id, token }) => {
             <img
               className={options.o2 ? "show" : "hide"}
               src={tick}
-              alt="tick-img"
+              alt="tik-işareti"
             />
           </div>
           <span>%30'u Kadar Teklif Ver</span>
@@ -93,7 +93,7 @@ const OfferModal = ({ img, title, price, setShowOfferModal, id, token }) => {
             <img
               className={options.o3 ? "show" : "hide"}
               src={tick}
-              alt="tick-img"
+              alt="tik-işareti"
             />
           </div>
           <span>%40'ı Kadar Teklif Ver</span>

@@ -52,7 +52,7 @@ const ItemDetails = () => {
     return (
       <>
         <Header />
-        <img className="item-loading " src={loading} alt="ürün yükleniyor" />
+        <img className="item-loading " src={loading} alt="yükleniyor" />
       </>
     );
   }

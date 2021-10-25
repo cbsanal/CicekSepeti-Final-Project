@@ -5,7 +5,7 @@ const ItemCard = ({ brandName, colorName, imageUrl, price, id }) => {
     <Link to={`/item/${id}`}>
       <div className="item">
         <div className="item-img-wrapper">
-          <img src={imageUrl} alt="urun-img" />
+          <img src={imageUrl} alt="ürün-resmi" />
         </div>
         <div className="brand-color-wrapper">
           <span>{brandName}</span>

@@ -56,7 +56,7 @@ const Offer = (props) => {
   return (
     <div className="offered-item-container">
       <div className="img-wrapper">
-        <img src={imageUrl} alt="item img" />
+        <img src={imageUrl} alt="ürün-resmi" />
       </div>
       <div className="item-info">
         <div className="offered-item">

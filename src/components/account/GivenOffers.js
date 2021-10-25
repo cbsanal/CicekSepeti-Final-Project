@@ -16,7 +16,7 @@ const GivenOffers = ({ token }) => {
   return (
     <>
       {givenOffers.isLoading && (
-        <img className="offers-loading" src={loading} alt="loading-img" />
+        <img className="offers-loading" src={loading} alt="yükleniyor" />
       )}
       {givenOffers.data.map((offer) => (
         <Offer type={"givenOffers"} key={offer.id} {...offer} token={token} />
