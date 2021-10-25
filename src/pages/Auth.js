@@ -63,7 +63,7 @@ const Auth = ({ formType }) => {
         <div className="logo-container">
           <img src={logo} alt="ikinci-el-logo" />
         </div>
-        <div className="auth-form-container br8">
+        <div className="auth-form-container">
           <span>{formType === "register" ? "Üye Ol" : "Giriş Yap"}</span>
           <span>
             Fırsatlardan yararlanmak için

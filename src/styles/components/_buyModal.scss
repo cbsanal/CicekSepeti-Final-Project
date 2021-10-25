@@ -6,11 +6,13 @@
   width: 100%;
   z-index: 5;
 }
+
 .buy-container {
   background-color: #fff;
   margin: auto;
   text-align: center;
   padding: 2rem;
+  border-radius: 8px;
   p {
     margin: 0;
     &:first-child {
@@ -25,6 +27,7 @@
     }
   }
 }
+
 .buy-btn-wrapper {
   margin-top: 2rem;
   button {

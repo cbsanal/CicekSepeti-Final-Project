@@ -4,28 +4,51 @@
   box-sizing: inherit;
   font-family: "Nunito", sans-serif;
 }
+
 html {
   font-size: 62.5%;
   box-sizing: border-box;
 }
+
 body {
   padding: 0;
   margin: 0;
   background-color: #f2f2f2;
 }
+
 button {
   cursor: pointer;
   border: none;
   background: none;
 }
+
 a {
   text-decoration: none;
 }
+
 img {
   width: 100%;
   height: 100%;
   object-fit: cover;
 }
+
 input {
   border: none;
+}
+
+//Below codes for changing toast library default styles
+
+.Toastify__toast--error {
+  background-color: #ffe5e5 !important;
+  color: #f77474 !important;
+  font-size: 1.6rem;
+}
+:root {
+  --toastify-icon-color-error: #f77474 !important;
+  --toastify-icon-color-success: #46af32 !important;
+}
+.Toastify__toast--success {
+  font-size: 1.6rem !important;
+  background-color: #f1fff0 !important;
+  color: #46af32 !important;
 }

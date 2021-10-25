@@ -119,9 +119,11 @@
   text-align: left;
   margin-left: 3rem;
 }
+
 .checkbox {
   display: none;
 }
+
 .label {
   display: block;
   overflow: hidden;
@@ -131,26 +133,31 @@
   width: 4.4rem;
   position: relative;
 }
+
 .inner {
   display: block;
   width: 200%;
   margin-left: -100%;
   transition: margin 0.2s ease-in 0s;
 }
+
 .inner:before,
 .inner:after {
   float: left;
   width: 50%;
   height: 2.4rem;
 }
+
 .inner:before {
   content: "";
   background-color: #4b9ce2;
 }
+
 .inner:after {
   content: "";
   background-color: #bbb;
 }
+
 .switch {
   display: block;
   width: 2rem;
@@ -163,12 +170,15 @@
   transition: all 0.2s ease-in 0s;
   box-shadow: 0px 2px 4px #1e36482e;
 }
+
 .checkbox:checked + .label .inner {
   margin-left: 0;
 }
+
 .checkbox:checked + .label .switch {
   right: 3px;
 }
+
 // Switch button finish
 
 .submit-item-btn {

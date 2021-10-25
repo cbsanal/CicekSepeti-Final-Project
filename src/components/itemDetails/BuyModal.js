@@ -27,7 +27,7 @@ const BuyModal = ({ setShowBuyModal, id, token }) => {
 
   return (
     <section className="buy-modal">
-      <div className="buy-container br8">
+      <div className="buy-container">
         <p>Satın Al</p>
         <p>Satın Almak istiyor musunuz?</p>
         <div className="buy-btn-wrapper">
