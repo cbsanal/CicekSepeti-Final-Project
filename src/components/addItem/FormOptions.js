@@ -18,7 +18,12 @@ const FormOptions = (props) => {
   return (
     <div>
       <label htmlFor="category">{type.name}</label>
-      <div className="selected-option" onClick={toggle}>
+      <div
+        className="selected-option"
+        onClick={toggle}
+        tabIndex="0"
+        onFocus={toggle}
+      >
         <span className={makeFontBlack ? "black" : null}>{type.title}</span>
         <img src={dropDown} alt="aşağı-ok" />
       </div>
@@ -32,6 +37,10 @@ const FormOptions = (props) => {
             {options.map((option) => (
               <li
                 onClick={() => handleChange(option.title, option.id)}
+                tabIndex="0"
+                onKeyUp={(e) => {
+                  if (e.key === "Enter") handleChange(option.title, option.id);
+                }}
                 key={option.id}
               >
                 {option.title}

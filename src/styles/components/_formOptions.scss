@@ -17,6 +17,9 @@
     width: 9px;
     height: auto;
   }
+  &:focus {
+    outline: none;
+  }
 }
 
 .black {

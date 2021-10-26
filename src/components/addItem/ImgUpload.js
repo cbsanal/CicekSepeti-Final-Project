@@ -82,6 +82,14 @@ const ImgUpload = ({ imgUrl, setImgUrl }) => {
               setFiles([]);
               setLoadingProcess(0);
             }}
+            tabIndex="0"
+            onKeyUp={(e) => {
+              if (e.key === "Enter") {
+                setImgUrl(false);
+                setFiles([]);
+                setLoadingProcess(0);
+              }
+            }}
             className="img-delete"
           />
         </div>

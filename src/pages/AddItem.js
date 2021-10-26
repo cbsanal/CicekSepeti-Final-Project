@@ -1,5 +1,5 @@
 import { Header, FormOptions, ImgUpload } from "../components";
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import { fetchItemOptionsAct, addItemAct } from "../redux/actions";
 import { useDispatch, useSelector } from "react-redux";
 import { toast } from "react-toastify";
@@ -28,6 +28,7 @@ const AddItem = () => {
   const [showBrandOptions, setShowBrandOptions] = useState(false);
   const [showStatusOptions, setShowStatusOptions] = useState(false);
   const [priceValidationErr, setPriceValidationErr] = useState(false);
+  const checkbox = useRef();
   const itemOptions = useSelector((state) => state.itemOptions);
   const newItem = useSelector((state) => state.newItem);
 
@@ -41,7 +42,7 @@ const AddItem = () => {
 
   useEffect(() => {
     if (newItem.status) {
-      toast.success("İşlem başarılı, bol şans", { hideProgressBar: true });
+      toast.success("İşlem başarılı, bol şans", { autoClose: 2250 });
       setTimeout(() => {
         window.location.reload();
       }, 2250);
@@ -156,8 +157,21 @@ const AddItem = () => {
                   className="checkbox"
                   id="switch"
                   onChange={() => setIsOfferable(!isOfferable)}
+                  ref={checkbox}
                 />
-                <label className="label" htmlFor="switch">
+                <label
+                  className="label"
+                  htmlFor="switch"
+                  tabIndex="0"
+                  onKeyUp={(e) => {
+                    if (e.key === "Enter") {
+                      setIsOfferable(!isOfferable);
+                      if (checkbox.current.checked)
+                        checkbox.current.checked = false;
+                      else checkbox.current.checked = true;
+                    }
+                  }}
+                >
                   <span className="inner" />
                   <span className="switch" />
                 </label>
