@@ -16,8 +16,21 @@ You will also see any lint errors in the console.
 
 ## Performance Images
 
+### In Google Page Speed Insights
+Below images taken after publishing the website.\
+\
+<b>For Desktop:</b>\
+92 is my top point, most of the time I got between 85-92 points.\
+\
+<img src="./performance-images/pageSpeed-insights-desktop.png">\
+\
+<b>For Mobile:</b>\
+67 is my top point, most of the time I got between 60-67 points.\
+\
+<img src="./performance-images/pageSpeed-insights-mobile.png">
+
 ### In Production Mode
-Below images taken after building the file.\
+Below images taken after building the file (in localhost).\
 \
 <b>For Desktop:</b>\
 83 is my top point, most of the time I got between 80-83 points.\
@@ -30,15 +43,6 @@ Below images taken after building the file.\
 <img src="./performance-images/mobile-production.png">
 
 ### In Development Mode
-Below images taken in develoment mode.\
-\
-<b>For Desktop:</b>\
-80 is my top point, most of the time I got between 76-80 points.\
-\
-<img src="./performance-images/desktop-development.png">\
-\
-<b>For Mobile:</b>\
-I usually got between 42-44 points. (Reason for the low score mainly caused by images type and images size which is coming from the server.)\
-\
-<img src="./performance-images/mobile-development.png">
+If you are interesting with the development mode performance scores you can find them in performance-images folder.
+
 
